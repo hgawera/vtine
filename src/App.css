@@ -1,38 +1,79 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-family: 'Arial', sans-serif;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  
+  /* Animated Background */
+  background: linear-gradient(-45deg, pink, #a51c30 , #c52233, #a7333f, #74121d);
+  background-size: 400% 400%;
+  animation: gradientBG 10s ease infinite;
+}
+
+/* The math for the movement */
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.btn-yes {
+  background-color: #ff4d6d;
   color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.5rem;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s;
 }
 
-.App-link {
-  color: #61dafb;
+.btn-yes:hover {
+  transform: scale(1.1);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btn-no {
+  background-color: #ffffff;
+  color: #ff4d6d;
+  border: 2px solid #ff4d6d;
+  padding: 15px 30px;
+  font-size: 1.5rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  z-index: 10;
+  
+}
+
+
+.gif {
+  width: 250px;
+  height: auto;
+  border-radius: 15px;
+  margin-top: 20px;
+}
+
+.button-group {
+  margin-bottom: 20px;
+}
+
+p {
+  display: flex;
+  width: 50%;
+  height: 50%;
+}
+
+.love-message {
+  font-size: 1.2rem;
+  max-width: 80%;
+  line-height: 1.6;
+  margin: 20px auto;
+  color: #555;
 }
